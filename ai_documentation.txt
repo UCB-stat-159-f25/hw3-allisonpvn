@@ -1,1 +1,23 @@
-Prompt: 
+Prompt: Here is ligotools, a package I am creating. What are some examples of tests I can write for readligo.py? Give the name of the test but not the body. 
+
+Answer: 
+
+Nice, let’s knock out the readligo.py tests.
+
+You want a ligotools/tests/test_readligo.py file that:
+
+imports your readligo function from the installed package
+
+reads one of the HDF5 files in data/
+
+checks shape, basic metadata, sampling rate, and that a bad filename raises
+
+
+def _data_path(fname):
+    here = os.path.dirname(__file__)
+    repo_root = os.path.abspath(os.path.join(here, "..", ".."))
+    return os.path.join(repo_root, "data", fname)
+
+def test_readligo_returns_expected_shapes()
+def test_readligo_sampling_rate_is_reasonable()
+def test_readligo_raises_for_missing_file()
