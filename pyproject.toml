@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligotools"
+version = "0.1.0"
+description = "Helper tools for working with LIGO open data (Stat 159/259 HW3)"
+authors = [
+  {name = "LIGO Scientific Collaboration (LSC)"},
+  {name = "Allison Nguyen", email="allisonvyn@berkeley.edu"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "h5py",
+  "astropy",
+  "pandas",
+  "pytest"
+]
+
+
+license = "BSD-3-Clause"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+keywords = ["ligo", "gravitational waves", "tools"]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/UCB-stat-159-f25/hw3-allisonpvn"
+Issues = "https://github.com/UCB-stat-159-f25/hw3-allisonpvn/issues"
+
+[tool.setuptools]
+packages = ["ligotools"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ligotools.__version__"}
