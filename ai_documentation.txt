@@ -1,3 +1,7 @@
+AI Documentation
+
+AI was used to suggest tests and debug parts of my code after multiple attempts.
+
 Prompt: Here is ligotools, a package I am creating. What are some examples of tests I can write for readligo.py? Give the name of the test but not the body. 
 
 Answer: 
@@ -21,3 +25,12 @@ def _data_path(fname):
 def test_readligo_returns_expected_shapes()
 def test_readligo_sampling_rate_is_reasonable()
 def test_readligo_raises_for_missing_file()
+
+Prompt: Hello, I keep seeing errors rendering my MyST. Is it a problem with my yaml [yaml inserted].
+
+Answer:
+This is a YAML syntax/indentation issue in myst.yml (not a MyST bug). Two common culprits:
+
+A tab character or mis-indent under project:
+
+An unquoted colon in the title (e.g., ... Homework 3: From ...) together with bad wrapping

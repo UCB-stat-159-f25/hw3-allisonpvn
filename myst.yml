@@ -2,13 +2,13 @@
 version: 1
 project:
   id: 06351d27-f891-430a-84ea-832a1041f92e
-  title: STAT 159 Homework 3: From Notebooks to Research Packages
-  # description:
-  # keywords: []
+  title: STAT 159 Homework 3, From Notebooks to Research Packages
   authors: 
   - name: Allison P. Nguyen
-      affiliation: UC Berkeley
   github: https://github.com/UCB-stat-159-f25/hw3-allisonpvn
+  jupyter:
+    binder:
+      repo: https://github.com/UCB-stat-159-f25/hw3-allisonpvn.git
   # To autogenerate a Table of Contents, run "myst init --write-toc"
   toc:
     - file: README.md
