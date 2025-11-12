@@ -10,6 +10,12 @@ import matplotlib.mlab as mlab
 from ligotools import readligo as rl
 
 from scipy.io import wavfile
+__all__ = [
+    "whiten",
+    "write_wavfile",
+    "reqshift",
+    "plot_detector_change",
+]
 
 
 def whiten(strain, interp_psd, dt):
@@ -42,7 +48,7 @@ def reqshift(data,fshift=100,sample_rate=4096):
     z = np.fft.irfft(y)
     return z
 
-def plot_changes(det, time, timemax, tevent, 
+def plot_detector_change(det, time, timemax, tevent, 
                  SNR, strain_L1_whitenbp, strain_H1_whitenbp, template_match,
                  freqs, data_psd, template_fft, datafreq, 
                  d_eff, eventname, fs, plottype='png', color = "r"):
@@ -77,7 +83,7 @@ def plot_changes(det, time, timemax, tevent,
     plt.grid('on')
     plt.xlabel('Time since {0:.4f}'.format(timemax))
     plt.legend(loc='upper left')
-    plt.savefig("figures/"+(eventname+"_"+det+"_SNR."+plottype))
+    plt.savefig("figures/"+(eventname+"_"+det+"_SNR."+plottype)) #removing need to use os
     
     plt.figure(figsize=(10,8))
     plt.subplot(2,1,1)
