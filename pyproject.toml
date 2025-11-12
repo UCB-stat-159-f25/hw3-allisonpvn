@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel", "numpy"]
+requires = ["setuptools>=70", "numpy"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -17,8 +17,8 @@ dependencies = [
   "scipy",
   "matplotlib",
   "h5py",
-  "astropy",
-  "pandas",
+  "ipykernel",
+  "tqdm",
   "pytest"
 ]
 
@@ -39,6 +39,3 @@ Issues = "https://github.com/UCB-stat-159-f25/hw3-allisonpvn/issues"
 
 [tool.setuptools]
 packages = ["ligotools"]
-
-[tool.setuptools.dynamic]
-version = {attr = "ligotools.__version__"}

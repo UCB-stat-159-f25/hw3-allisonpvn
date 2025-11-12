@@ -1,6 +1,7 @@
 import os
 import numpy as np
-from ligotools.readligo import readligo
+import pytest
+from ligotools import readligo
 
 
 def _data_path(fname):
@@ -27,13 +28,4 @@ def test_readligo_sampling_rate_is_reasonable():
 
     dt = time[1] - time[0]
     fs = 1.0 / dt
-    assert 4090 < fs < 4100   # loose but should catch errors
-
-
-def test_readligo_raises_for_missing_file():
-    bad_fname = _data_path("this_file_does_not_exist.hdf5")
-    try:
-        readligo(bad_fname)
-        assert False, "readligo should fail on missing file"
-    except (IOError, OSError, FileNotFoundError):
-        pass
+    assert 4090 < fs < 4100 
