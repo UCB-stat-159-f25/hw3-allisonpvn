@@ -7,3 +7,5 @@ Note that my tests run with the GitHub command python -m pytest ligotools rather
 Binder Link: https://mybinder.org/v2/gh/UCB-stat-159-f25/hw3-allisonpvn/HEAD
 
 Github Pages Link: https://UCB-stat-159-f25.github.io/hw3-allisonpvn
+
+Note: I am experiencing continued 404 errors when attempting to deploy my page.
